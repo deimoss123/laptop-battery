@@ -1,0 +1,16 @@
+{
+  "name": "laptop-battery",
+  "main": "src/index.ts",
+  "version": "1.0.50",
+  "scripts": {
+    "dev": "bun run --watch ."
+  },
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}
