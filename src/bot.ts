@@ -13,7 +13,7 @@ function presenceString(
   if (isSleeping) {
     return `🛌 čuč | Baterija: ${percentage}% (?)`;
   } else if (isCharging) {
-    return `${emojis.chargingIndicator} Baterija: ${percentage}% (lādējas)`;
+    return `${emojis.chargingIndicator} lādējas | Baterija: ${percentage}%`;
   } else {
     return `Baterija: ${percentage}%`;
   }
