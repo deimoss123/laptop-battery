@@ -22,6 +22,15 @@ export async function getLatestEntry() {
   return entries.length ? entries[0] : null;
 }
 
+export async function getAllData() {
+  await createDataFileIfNotExist();
+  const dataFile = Bun.file(pathToFile);
+
+  const data = (await dataFile.json()) as DataFileType;
+
+  return data;
+}
+
 export async function addEntry(batStatus: BatStatus) {
   await createDataFileIfNotExist();
   const dataFile = Bun.file(pathToFile);

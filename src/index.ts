@@ -1,6 +1,6 @@
 import { Elysia, t } from 'elysia';
-import './bot';
-import { addEntry, createDataFileIfNotExist } from './storage';
+// import './bot';
+import { addEntry, createDataFileIfNotExist, getAllData } from './storage';
 import { BatStatus } from './types';
 
 const app = new Elysia();
@@ -62,6 +62,11 @@ app.post(
     body: t.Object({ text: t.String(), token: t.String() }),
   }
 );
+
+app.get('/thinkpad/baterija', async req => {
+  const res = await getAllData();
+  return res;
+});
 
 app.listen(process.env.PORT || 3000);
 
