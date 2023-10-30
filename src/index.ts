@@ -1,5 +1,5 @@
 import { Elysia, t } from 'elysia';
-// import './bot';
+import './bot';
 import { addEntry, createDataFileIfNotExist, getAllData } from './storage';
 import { BatStatus } from './types';
 
